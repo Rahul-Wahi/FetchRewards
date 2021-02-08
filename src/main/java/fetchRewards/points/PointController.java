@@ -15,7 +15,7 @@ public class PointController {
     @Autowired
     private PointService pointService;
 
-    private String currentUser = "FetchRewards"; // hardcoded for now; setup authentication and get current user
+    private final String currentUser = "FetchRewards"; // hardcoded for now; setup authentication and get current user
 
     @RequestMapping("")
     public List<Point> getAllPoints() {

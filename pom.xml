@@ -13,7 +13,7 @@
     <artifactId>Points</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <name>points-api</name>
+    <name>fetchRewards.points-api</name>
     <description>Points API Fetch Rewards Coding Exercise - Backend Software Engineering</description>
 
     <properties>
