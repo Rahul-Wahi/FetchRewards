@@ -1,12 +1,14 @@
-package points;
+package fetchRewards.points;
 
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
 import java.util.Date;
 
 @Entity
@@ -14,10 +16,18 @@ public class Point {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private String id;
+    private Integer id;
+
+    @NotNull
     private String payer;
+
+    @NotNull
     private Integer points;
-    private String user;
+
+    @JsonIgnore
+    private Integer used = 0;
+
+    private String customer;
 
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date transactionDate;
@@ -26,16 +36,16 @@ public class Point {
 
     }
 
-    public Point(String payer, Integer points, Date transactionDate) {
+    public Point(String payer, Integer points, Date transactionDate, String customer) {
         this.payer = payer;
         this.points = points;
         this.transactionDate = transactionDate;
-
+        this.customer = customer;
     }
 
-    public String getId() { return id; }
+    public Integer getId() { return id; }
 
-    public void setId(String id) { this.id = id; }
+    public void setId(Integer id) { this.id = id; }
 
     public String getPayer() {
         return payer;
@@ -61,7 +71,11 @@ public class Point {
         this.transactionDate = transactionDate;
     }
 
-    public String getUser() { return user; }
+    public String getCustomer() { return customer; }
 
-    public void setUser(String user) { this.user = user; }
+    public void setCustomer(String currentUser) { this.customer = currentUser; }
+
+    public Integer getUsed() { return used; }
+
+    public void setUsed(Integer used) { this.used = used; }
 }
