@@ -1,4 +1,4 @@
-package fetchRewards.points;
+package fetchRewards.points.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 

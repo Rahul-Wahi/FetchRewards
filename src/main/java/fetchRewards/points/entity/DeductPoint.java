@@ -1,6 +1,10 @@
-package fetchRewards.points;
+package fetchRewards.points.entity;
+
+import javax.validation.constraints.NotNull;
 
 public class DeductPoint {
+
+    @NotNull
     private Integer points;
 
     public Integer getPoints() {

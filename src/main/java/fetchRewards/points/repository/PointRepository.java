@@ -1,5 +1,6 @@
-package fetchRewards.points;
+package fetchRewards.points.repository;
 
+import fetchRewards.points.entity.Point;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;

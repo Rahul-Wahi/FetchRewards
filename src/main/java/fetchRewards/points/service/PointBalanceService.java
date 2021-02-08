@@ -1,5 +1,7 @@
-package fetchRewards.points;
+package fetchRewards.points.service;
 
+import fetchRewards.points.repository.PointBalanceRepository;
+import fetchRewards.points.entity.PointBalance;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,11 +14,11 @@ public class PointBalanceService {
     @Autowired
     PointBalanceRepository pointBalanceRepository;
 
-    List<PointBalance> getAllPointBalance(String customer) {
+    public List<PointBalance> getAllPointBalance(String customer) {
         return new ArrayList<>(pointBalanceRepository.findAllByCustomer(customer));
     }
 
-    PointBalance find(String customer, String payer) {
+    public PointBalance find(String customer, String payer) {
         return pointBalanceRepository.findByCustomerAndPayer(customer, payer);
     }
 

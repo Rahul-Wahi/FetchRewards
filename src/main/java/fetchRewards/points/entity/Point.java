@@ -1,4 +1,4 @@
-package fetchRewards.points;
+package fetchRewards.points.entity;
 
 
 import com.fasterxml.jackson.annotation.JsonFormat;
@@ -27,6 +27,7 @@ public class Point {
     @JsonIgnore
     private Integer used = 0;
 
+    @JsonIgnore
     private String customer;
 
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
