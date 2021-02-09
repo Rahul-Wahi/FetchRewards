@@ -21,16 +21,19 @@ import java.util.List;
 @RequestMapping("/points")
 public class PointController {
 
-    @Autowired
-    private PointService pointService;
-
-    @Autowired
-    private PointBalanceService pointBalanceService;
-
-    @Autowired
-    Validator validator;
-
+    private final PointService pointService;
+    private final PointBalanceService pointBalanceService;
+    private final Validator validator;
     private final String currentUser = "FetchRewards"; // hardcoded for now; setup authentication and get current user
+
+    @Autowired
+    public PointController(PointService pointService,
+                           PointBalanceService pointBalanceService,
+                           Validator validator) {
+        this.pointService = pointService;
+        this.pointBalanceService = pointBalanceService;
+        this.validator = validator;
+    }
 
     @RequestMapping("transactions")
     public List<Point> getAllPoints() {

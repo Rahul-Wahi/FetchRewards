@@ -11,8 +11,12 @@ import java.util.List;
 @Service
 public class PointBalanceService {
 
+    private final PointBalanceRepository pointBalanceRepository;
+
     @Autowired
-    PointBalanceRepository pointBalanceRepository;
+    public PointBalanceService(PointBalanceRepository pointBalanceRepository) {
+        this.pointBalanceRepository = pointBalanceRepository;
+    }
 
     public List<PointBalance> getAllPointBalance(String customer) {
         return new ArrayList<>(pointBalanceRepository.findAllByCustomer(customer));

@@ -12,14 +12,14 @@ import javax.validation.constraints.NotNull;
 public class PointBalance {
 
     @Id
-    String payer;
+    private String payer;
 
     @Id
     @JsonIgnore
-    String customer;
+    private String customer;
 
     @NotNull
-    Integer balance;
+    private Integer balance;
 
     public PointBalance() {
     }

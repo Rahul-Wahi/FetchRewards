@@ -17,13 +17,18 @@ import java.util.Map;
 @Service
 public class PointService {
 
-    @Autowired
-    private PointRepository pointRepository;
 
-    @Autowired
-    private PointBalanceService pointBalanceService;
+    private final PointRepository pointRepository;
+    private final PointBalanceService pointBalanceService;
 
     int totalPoints;
+
+    @Autowired
+    public PointService(PointRepository pointRepository,
+                        PointBalanceService pointBalanceService) {
+        this.pointRepository = pointRepository;
+        this.pointBalanceService = pointBalanceService;
+    }
 
     public List<Point> getAllPoints (String customer) {
         return new ArrayList<>(pointRepository.findAllByCustomer(customer));

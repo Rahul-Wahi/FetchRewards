@@ -5,8 +5,8 @@ import java.util.Objects;
 
 public class BalanceId implements Serializable {
 
-    String payer;
-    String customer;
+    private String payer;
+    private String customer;
 
     public BalanceId() {
     }

@@ -20,7 +20,7 @@ public class Validator {
         }
 
         if (points <= 0) {
-            throw new IllegalArgumentException("Number of points should pe positive");
+            throw new IllegalArgumentException("Number of points should be positive");
         }
     }
 
