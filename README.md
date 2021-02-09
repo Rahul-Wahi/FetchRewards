@@ -18,12 +18,20 @@
 1. Java version 11.0.9
 1. Apache Maven version 3.6.2
 
+
 ### API Resources
 
   - [GET /balance](#get-balance)
   - [GET /transacations](#get-transactions)
   - [POST /add](#post-add)
   - [PUT /deduct](#put-deduct)
+
+### Steps to change API exposed port 
+  -  By default the API will be avaiable at 8080 port. To chnage
+  
+      1. cd to ~\FetchRewards\src\main\resources
+      2. Edit application.properties and change server.port to desired port 
+    
 
 ### GET /balance
 
