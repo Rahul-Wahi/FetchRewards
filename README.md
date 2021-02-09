@@ -1,10 +1,13 @@
 # FetchRewards - Web service
-# Tech Stack
+## Tech Stack
 1. Java (11+)
 2. Maven
 3. SpringBoot
 
-# Steps to Run
+## Pre-requisite
+1. JDK 11, [Install JDK](https://docs.oracle.com/en/java/javase/11/install/overview-jdk-installation.html#GUID-8677A77F-231A-40F7-98B9-1FD0B48C346A)
+1. Maven, [Install Maven](http://maven.apache.org/install.html)
+## Steps to Run
 1. git clone https://github.com/Rahul-Wahi/FetchRewards
 1. cd FetchRewards
 1. mvn spring-boot:run
