@@ -26,13 +26,13 @@ Response body:
     [
     {
         "payer": "Uniliver",
-        "balance": 200
+        "balance": 400
     },
     {
         "payer": "dannon",
-        "balance": 300
+        "balance": 100
     }
-]
+    ]
 
 ### GET /transactions
 
@@ -52,8 +52,20 @@ Response body:
         "payer": "Uniliver",
         "points": 200,
         "transactionDate": "2021-02-09 00:37:00"
+    },
+    {
+        "id": 3,
+        "payer": "dannon",
+        "points": -200,
+        "transactionDate": "2021-02-09 00:44:12"
+    },
+    {
+        "id": 4,
+        "payer": "Uniliver",
+        "points": 200,
+        "transactionDate": "2021-02-09 00:46:36"
     }
-]
+    ]
 
 
 
