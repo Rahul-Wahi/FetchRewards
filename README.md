@@ -12,6 +12,7 @@
 ## Steps to Run
 1. git clone https://github.com/Rahul-Wahi/FetchRewards
 1. cd FetchRewards
+1. mvn clean install
 1. mvn spring-boot:run
 
 ## My Development Environment
