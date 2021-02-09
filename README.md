@@ -4,11 +4,10 @@
 2. Maven
 3. SpringBoot
 
-# End Points
-1. *Add points: POST http://localhost:8080/points/add
-1. Deduct Points: PUT http://localhost:8080/points/deduct
-1. Get Balance: http://localhost:8080/points/balance
-1. Get Transactions: http://localhost:8080/points/transactions
+# Steps to Run
+1. git clone https://github.com/Rahul-Wahi/FetchRewards
+1. cd FetchRewards
+1. mvn spring-boot:run
 
 ### API Resources
 
