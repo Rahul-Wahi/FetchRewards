@@ -3,6 +3,7 @@
 1. Java (11+)
 1. Maven
 1. SpringBoot
+1. Apache Derby in-memory database
 
 ## Pre-requisite
 1. JDK 11, [Install JDK](https://docs.oracle.com/en/java/javase/11/install/overview-jdk-installation.html#GUID-8677A77F-231A-40F7-98B9-1FD0B48C346A)
@@ -11,6 +12,7 @@
 ## Steps to Run
 1. git clone https://github.com/Rahul-Wahi/FetchRewards
 1. cd FetchRewards
+1. mvn clean install
 1. mvn spring-boot:run
 
 ## My Development Environment
@@ -18,12 +20,20 @@
 1. Java version 11.0.9
 1. Apache Maven version 3.6.2
 
+
 ### API Resources
 
   - [GET /balance](#get-balance)
   - [GET /transacations](#get-transactions)
   - [POST /add](#post-add)
   - [PUT /deduct](#put-deduct)
+
+### Steps to change API exposed port 
+  -  By default the API will be avaiable at 8080 port. To chnage
+  
+      1. cd to ~\FetchRewards\src\main\resources
+      2. Edit application.properties and change server.port to desired port 
+    
 
 ### GET /balance
 
