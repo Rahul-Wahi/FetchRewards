@@ -114,7 +114,7 @@ Response body:
 
 ### PUT /deduct
 
-Example: Create – POST  http://localhost:8080/points/deduct
+Example: Create – PUT  http://localhost:8080/points/deduct
 
 Request body:
 
